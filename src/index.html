@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>UFPTS</title>
-  <link rel="stylesheet" href="index.css">
   <script>
     window.jQuery = window.$ = require('jquery');
   </script>
@@ -22,6 +21,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -34,14 +34,14 @@
     <form>
       <div class="form-group">
         <input type="text" class="form-control" id="searchInput" onsubmit="return false"
-          placeholder="Search for anything">
+          placeholder="Search for anything. The more specific, the better results.">
       </div>
     </form>
 
 
   </div>
   <div class="buttonContainer">
-    <button class="btn btn-primary" id="searchBtn">Search</button>
+    <button class="btn btn-warning" id="searchBtn">Search</button>
   </div>
   <div class="container-fluid d-flex flex-wrap justify-content-between" id="torrentContainer"></div>
   <footer class="footer mt-auto py-2">

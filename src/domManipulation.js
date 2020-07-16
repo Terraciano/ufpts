@@ -1,13 +1,15 @@
-const { remote } = require("electron");
-const search = require("./search");
 const render = require("./render");
 const torrentContainer = document.getElementById("torrentContainer");
 
 document.getElementById("searchBtn").addEventListener("click", async () => {
-  document.getElementById("searchBtn").innerText = "Searching";
+  document.getElementById("searchBtn").innerText = "Searching...";
   await render.renderSearch();
-  document.getElementById("searchBtn").innerText = "Search";
+  document.getElementById("searchBtn").innerText = "Search Again!";
 });
+
+const clearContainer = () => {
+  torrentContainer.innerHTML = "";
+};
 
 const createBootstrapCard = (title, size, peers, seeds) => {
   const seedPeersContainer = document.createElement("div");
@@ -71,4 +73,4 @@ const createBootstrapCard = (title, size, peers, seeds) => {
   torrentContainer.appendChild(container);
 };
 
-module.exports = { createBootstrapCard };
+module.exports = { createBootstrapCard, clearContainer };

@@ -9,6 +9,7 @@ new customTitlebar.Titlebar({
 });
 
 const renderSearch = async () => {
+  domManipulation.clearContainer();
   const busq = await search.searcher();
   for (let i = 0; i < busq.length; i++) {
     const torrent = busq[i];

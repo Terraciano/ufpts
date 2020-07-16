@@ -4,7 +4,7 @@ const searcher = async () => {
   const searchInput = document.getElementById("searchInput").value;
 
   torrentSearchApi.enableProvider("ThePirateBay");
-  //torrentSearchApi.enableProvider("1337x");
+  // torrentSearchApi.enableProvider("1337x");
 
   const torrents = await torrentSearchApi.search(searchInput, "", 50);
   console.log(torrents);
